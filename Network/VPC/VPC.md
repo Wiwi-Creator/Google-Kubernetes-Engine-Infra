@@ -1,55 +1,11 @@
----
-title: 'Network'
----
 
-Network
+VPC Network
 ===
 
 ## Networking
 ---
-在GKE中建立cluster，通常透過以下幾種網路方式做內部Pod的連接
+在GCP中，Virtual Private Cloud（簡稱 VPC）為使用者提供了全球性、可擴展且靈活的虛擬私有網絡，在 GCP 中是一項非常重要的基礎服務，它能夠讓使用者部署像是 Google Compute Engine、Google Kubernetes Engine 和 Google App Engine 等 GCP 服務到雲端。
+越複雜的架構到後期更難去變動，因此會建議使用者應在一開始時就對 VPC Network 的設計進行規劃。
 
-**建立一個cluster**
-```
-gcloud container clusters create-auto ${cluster_name} --region=${REGION}
-
-gcloud container clusters create [CLUSTER_NAME] --enable-stackdriver-kubernetes
-
-```
-**檢視cluster list**
-```
-gcloud container clusters list
-```
-**獲取身份驗證** (須確認有無gke-gcloud-auth-plugin)
-```
-gcloud container clusters get-credentials hello-cluster --region ${REGION}
-```
-**創建Deployment**
-因為我們需要在cluster中執行embulk
-```
-kubectl create deployment hello-server --image=image_name
-```
-刪除
----
-**刪除cluster**
-```
-gcloud container clusters delete hello-cluster --region ${REGION}
-```
-###### tags: `Templates` `Documentation`
-
-
-Demo
----
-建立image，並上傳至GCR
-接下來可以在本機，或是在console上建立cluster
-```
-gcloud container clusters create-auto ${cluster_name} --region=${region}
-```
-接下來我們希望在該cluster中建立Job，有兩種方式:
-1.在console中，使用cloudshell
-2.在本地連接指定cluster，並建立Job:
-```
-kubectl apply -f job.yaml
-```
-![](https://hackmd.io/_uploads/r1KUr4jr2.png)
-
+- 網路(network)選擇已經新增的VPC network (EX:"vpn")
+- 節點子網路(subnet)選擇所選的network下的子網路(vpn-asia-east1)
