@@ -88,5 +88,3 @@ spec:
 - [GKE-Cloud_NAT_policy](https://cloud.google.com/kubernetes-engine/docs/how-to/egress-nat-policy-ip-masq-autopilot)
 - [GKE-Workload Identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity)
 - [Container Registry](https://cloud.google.com/container-registry/docs)
-
-

@@ -15,22 +15,22 @@ Google Kubernetes Engine (GKE)
 - 模型成長遠遠大於硬體成長
 
 A Platform For All Workloads
-![Alt text](image.png)3
+![Alt text](image/image.png)3
 
 ### AI journey on GKE
-![Alt text](messageImage_1697614300334.jpg)
+![Alt text](img/messageImage_1697614300334.jpg)
 
 
 ### Trainging jobs on TPU VMS today
-![Alt text](messageImage_1697614575031.jpg)
+![Alt text](img/messageImage_1697614575031.jpg)
 
 
 ### Trainging jobs on in GKE VMS
-![Alt text](messageImage_1697614632188.jpg)
+![Alt text](img/messageImage_1697614632188.jpg)
 
 
 ### Muliclice Training jobs on GKE
-![Alt text](messageImage_1697614827212.jpg)
+![Alt text](img/messageImage_1697614827212.jpg)
 
 
 ### Keyword 
@@ -51,3 +51,26 @@ Cloud Shell預設有Google Cloud CLI,kubectl工具
 ```
 gcloud config set project PROJECT_ID
 ```
+
+## Cluster
+在理解基礎架構後 , 需要先建立Cluster
+- [Cluster](cluster/cluster.md)
+
+## Workload Identity
+需要先將Kubernetes Service account做相關設定
+- [Workload Identity](Workload＿Identity/Workload-Identity.md)
+
+## Network
+希望將Pod透過VPC對外連線 , 需要設定以下:
+
+1. [ip-masq-agent](Network/ip-masq-agent.md)
+
+2. [EgressNATpolicy](Network/EgressNATpolicy.md)
+
+3. [Pod](element/Pod/readme.md)
+   - [Priority_class]
+   - [Resources request]
+
+4. [Cloud Storage FUSE CSI driver](gcs_fuse_csi_driver/readme.md)
+   
+5. [kubectl aplly & kubectl exec](kubectl/README.md)

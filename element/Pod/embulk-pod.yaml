@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: embulk
+  annotations:
+    gke-gcsfuse/volumes: "true"
+spec:
+  serviceAccountName: k8s-digdag-server
+  containers:
+    - name: embulk-container
+      image: asia.gcr.io/datapool-1806/k8s-embulk:1.1.1
+      volumeMounts:
+      - name: gcs-fuse-csi-ephemeral
+        mountPath: /app/migo_dbt/edr_target
+        readOnly: false
+  volumes:
+  - name: gcs-fuse-csi-ephemeral
+    csi:
+      driver: gcsfuse.csi.storage.gke.io
+      readOnly: false
+      volumeAttributes:
+        bucketName: wiwi_test
+        mountOptions: "implicit-dirs"
+  restartPolicy: Always
