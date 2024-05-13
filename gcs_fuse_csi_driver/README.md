@@ -34,7 +34,7 @@ spec:
       driver: gcsfuse.csi.storage.gke.io
       readOnly: false
       volumeAttributes:
-        bucketName: wiwi_test
+        bucketName: ${bucket_name}
         mountOptions: "implicit-dirs"
   restartPolicy: Always
 ```

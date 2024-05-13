@@ -7,8 +7,8 @@ metadata:
 spec:
   serviceAccountName: k8s-digdag-server
   containers:
-    - name: embulk-container
-      image: asia.gcr.io/datapool-1806/k8s-embulk:1.1.1
+    - name: ${container_name}
+      image: ${image_name}
       volumeMounts:
       - name: gcs-fuse-csi-ephemeral
         mountPath: /app/migo_dbt/edr_target
@@ -19,6 +19,6 @@ spec:
       driver: gcsfuse.csi.storage.gke.io
       readOnly: false
       volumeAttributes:
-        bucketName: wiwi_test
+        bucketName: ${bucket_name}
         mountOptions: "implicit-dirs"
   restartPolicy: Always

@@ -63,9 +63,9 @@ gcloud config set project PROJECT_ID
 ## Network
 希望將Pod透過VPC對外連線 , 需要設定以下:
 
-1. [ip-masq-agent](Network/ip-masq-agent.md)
+1. [ip-masq-agent](Network/ip-masq-agent/ip-masq-agent.md)
 
-2. [EgressNATpolicy](Network/EgressNATpolicy.md)
+2. [EgressNATpolicy](Network/EgressNATpolicy/EgressNATpolicy.md)
 
 3. [Pod](element/Pod/readme.md)
    - [Priority_class]

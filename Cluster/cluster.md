@@ -69,8 +69,8 @@ gcloud container clusters create-auto ${cluster_name} --region=${REGION}
 - --enable-ip-alias 使Cluster成為VPC原生cluster(目前Autopilot模式已預設啟用)
 - --enable-private-nodes 使該cluster沒有External IP
 - --master-ipv4-cidr 用於指定Control Plane Internal IP範圍
-- --region asia-east1 該cluster區域
-- --project=datapool-1806 該cluster所屬project
+- --region  該cluster區域
+- --project=${project_name} 該cluster所屬project
 - --network vpn 選擇該cluster的VPC network
 - --subnetwork vpn-asia-east1 選擇該cluster的VPC network的subnetwork
 - --enable-master-authorized-networks 用來指定授權的 IP CIDR 訪問。
