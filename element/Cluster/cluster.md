@@ -1,12 +1,6 @@
----
-title: 'Cluster'
----
-
 Cluster
 ===
-
-## Cluster
-
+----
 ### **Autopilot VS Standard Cluster**
 
 - Standard 是根據所開的 Node 及 master 管理費做收費

@@ -1,11 +1,5 @@
----
-title: 'Workload-Identity'
----
-
 Workload-Identity
 ===
-
-## Workload-Identity
 --- 
 Applications often need to authenticate (provide an authenticatable identity) when connecting to other services.
 應用程式通常一些認證才得以連接其他服務。

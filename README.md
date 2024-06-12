@@ -1,12 +1,6 @@
----
-title: 'Google Kubernetes Engine (GKE)'
----
-
 Google Kubernetes Engine (GKE)
 ===
-
-## Google Kubernetes Engine 
-
+---
 ### Why GKE?
 
 - New Tools ,Framework <- 需要動態滿足及擴增情境提供客戶。 良好的擴展性

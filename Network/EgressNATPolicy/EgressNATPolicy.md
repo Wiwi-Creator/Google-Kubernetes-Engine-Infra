@@ -1,11 +1,5 @@
----
-title: 'EgressNATPolicy'
----
-
 EgressNATPolicy
 ===
-
-## EgressNATPolicy
 ---
 EgressNATPolicy 是GKE Autopilot中特定的資源，用與控制Cluster內部Pod與外部的連線。
 
