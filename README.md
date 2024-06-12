@@ -15,7 +15,7 @@ Google Kubernetes Engine (GKE)
 - 模型成長遠遠大於硬體成長
 
 A Platform For All Workloads
-![Alt text](image/image.png)3
+![Alt text](img/image.png)
 
 ### AI journey on GKE
 ![Alt text](img/messageImage_1697614300334.jpg)
