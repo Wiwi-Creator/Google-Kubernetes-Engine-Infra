@@ -67,10 +67,10 @@ gcloud config set project PROJECT_ID
 
 2. [EgressNATpolicy](Network/EgressNATpolicy/EgressNATpolicy.md)
 
-3. [Pod](element/Pod/readme.md)
+3. [Pod](element/Pod/README.md)
    - [Priority_class]
    - [Resources request]
 
-4. [Cloud Storage FUSE CSI driver](gcs_fuse_csi_driver/readme.md)
+4. [Cloud Storage FUSE CSI driver](gcs_fuse_csi_driver/README.md)
    
-5. [kubectl aplly & kubectl exec](kubectl/README.md)
+5. [kubectl aplly & kubectl exec](Kubectl/README.md)
