@@ -54,11 +54,11 @@ gcloud config set project PROJECT_ID
 
 ## Cluster
 在理解基礎架構後 , 需要先建立Cluster
-- [Cluster](cluster/cluster.md)
+- [Cluster](element/Cluster/cluster.md)
 
 ## Workload Identity
 需要先將Kubernetes Service account做相關設定
-- [Workload Identity](Workload＿Identity/Workload-Identity.md)
+- [Workload Identity](Workload_Identity/workload-Identity.md)
 
 ## Network
 希望將Pod透過VPC對外連線 , 需要設定以下:
@@ -67,8 +67,8 @@ gcloud config set project PROJECT_ID
 
 2. [EgressNATpolicy](Network/EgressNATpolicy/EgressNATpolicy.md)
 
-3. [Pod](element/Pod/README.md)
-   - [Priority_class]
+3. [Pod](element/Pod/readme.md)
+   - [Priority class]
    - [Resources request]
 
 4. [Cloud Storage FUSE CSI driver](gcs_fuse_csi_driver/README.md)
