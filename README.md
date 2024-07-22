@@ -37,15 +37,9 @@ A Platform For All Workloads
 Architecture
 ===
 ### 原先的單體式架構(Monolithic)
-``` mermaid
-graph TD
-    User[User] -->|Interacts with| Airflow[Airflow Monolith]
-    Airflow -->|Schedules / Executes| Tasks[Tasks]
-    Airflow -->|Uses| MetaStore[Metadata Database]
 
-    classDef monolith fill:#4285F4,stroke:#333,stroke-width:4px;
-    class Airflow monolith;
-```
+![alt text](image.png)
+
 **優點**
 - 學習成本較低
 - 僅需維運一台Node
@@ -59,28 +53,8 @@ graph TD
 
 
 ### 希望調整成的微服務架構 (Micro-Service) GKE
-``` mermaid
-graph TD
-    User[User] -->|Interacts with| WebServer[Web Server]
 
-    WebServer -->|Schedules tasks| Scheduler[Scheduler]
-    Scheduler -->|Sends tasks| Queue[Queueing Service]
-    Queue -->|Dispatches tasks to| Executor1[Worker 1]
-    Queue -->|Dispatches tasks to| Executor2[Worker 2]
-    Queue -->|Dispatches tasks to| ExecutorN[Worker N]
-
-    Executor1 -->|Updates status| MetaStore[Metadata Database]
-    Executor2 -->|Updates status| MetaStore
-    ExecutorN -->|Updates status| MetaStore
-
-    classDef service fill:#34A853,stroke:#333,stroke-width:2px;
-    classDef database fill:#FBBC05,stroke:#333,stroke-width:2px;
-    classDef user fill:#FFFFFF,stroke:#1A1A1A,stroke-width:2px;
-
-    class WebServer,Scheduler,Queue,Executor1,Executor2,ExecutorN service;
-    class MetaStore database;
-    class User user;
-```
+![alt text](image-1.png)
 註 : 每一個worker皆為一個獨立的節點(Node)
 
 **優點**
